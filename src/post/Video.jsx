@@ -1,3 +1,4 @@
+import { PostMeta, PostNotes, PrePost } from './Includes.jsx';
 
 window.VideoPost = React.createClass({
   render: function() { return (
@@ -21,3 +22,5 @@ window.VideoPost = React.createClass({
      </div>
   );}
 });
+
+export default VideoPost;

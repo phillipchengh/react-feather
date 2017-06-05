@@ -1,5 +1,6 @@
+import { PostMeta, PostNotes, PrePost } from './Includes.jsx';
 
-window.AudioPost = React.createClass({
+const AudioPost = React.createClass({
   render: function() { return (
       <div className="r_post_audio">
         <div className="audio post">
@@ -36,3 +37,5 @@ window.AudioPost = React.createClass({
       </div>
   );}
 });
+
+export default AudioPost;

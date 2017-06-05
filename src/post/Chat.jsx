@@ -1,5 +1,6 @@
+import { PostMeta, PostNotes, PrePost } from './Includes.jsx';
 
-window.ChatPost = React.createClass({
+const ChatPost = React.createClass({
   render: function() { return (
       <div className="r_post_audio">
         <div className="conversation post">
@@ -30,3 +31,4 @@ window.ChatPost = React.createClass({
   );}
 });
 
+export default ChatPost;

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  {block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
+  <title>{Title} {block:PostTitle} {PostTitle} {/block:PostTitle}</title>
+
+  <link rel="shortcut icon" href="{Favicon}">
+  <link rel="alternate" type="application/rss+xml" href="{RSS}">
+  <link rel="apple-touch-icon" href="{PortraitURL-128}"></link>
+
+  <meta name="viewport"  content="width=660"/>
+</head>
+
+<body id="blog">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.2/react.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.2/react-dom.js"></script>
+<script type="text/javascript">
+  window.props = {
+    "Title" : "{Title}",
+    {block:Description}
+    "Description" : {JSDescription},
+    {/block:Description}
+    {block:AskEnabled}
+    "AskEnabled" : true,
+    {/block:AskEnabled}
+    {block:SubmissionsEnabled}
+    "SubmissionsEnabled" : true,
+    "SubmitLabel" : "{SubmitLabel}",
+    {/block:SubmissionsEnabled}
+
+    // Pages
+    {block:HasPages}
+    "Pages" : {
+      {block:Pages}
+      {JSURL} : {
+        URL         : {JSURL},
+        Label       : {JSLabel},
+      },
+      {/block:Pages}
+    },
+    {/block:HasPages}
+
+
+    {block:Pagination}
+    Pagination : {
+      {block:NextPage}
+      "NextPage" : "{NextPage}",
+      {/block:NextPage}
+      "lang:Older" : "{lang:Older}",
+      {block:PreviousPage}
+      "PreviousPage" : "{PreviousPage}",
+      {/block:PreviousPage}
+      "lang:Newer" : "{lang:Newer}",
+      "CurrentPage" : "{CurrentPage}",
+      "TotalPages"  : "{TotalPages}",
+    },
+    {/block:Pagination}
+
+
+    {block:PermalinkPagination}
+    PermalinkPagination : {
+      {block:PreviousPost}
+      "PreviousPost" : "{PreviousPost}",
+      {/block:PreviousPost}
+      "lang:Older" : "{lang:Older}",
+      {block:NextPost}
+      "NextPost" : "{NextPost}",
+      {/block:NextPost}
+      "lang:Newer" : "{lang:Newer}",
+      "CurrentPage" : "{CurrentPage}",
+      "TotalPages"  : "{TotalPages}",
+    },
+    {/block:PermalinkPagination}
+
+
+    // Posts
+    Posts: {
+      {block:Posts inlineMediaWidth="500"}
+
+      {JSPostID} : {
+
+        PostType:      {JSPostType},
+
+        {block:Quote}
+        "Quote"      : {JSQuote},
+        {block:Source}
+        "Source"     : {JSSource},
+        {/block:Source}
+        {/block:Quote}
+
+        {block:Photo}
+        "LinkOpenTag"      : {JSLinkOpenTag},
+        "LinkCloseTag"     : {JSLinkCloseTag},
+        "PhotoAlt"         : {JSPhotoAlt},
+        "PhotoURL-500"     : "{PhotoURL-500}",
+        {block:Caption}
+        "Caption"          : {JSCaption},
+        {/block:Caption}
+        {/block:Photo}
+
+        {block:Video}
+        "Video-500"  : {JSVideo-500},
+        "Caption"    : {JSCaption},
+        "lang:Notes" : "{lang:Notes}",
+        {/block:Video}
+        {block:Link}
+        "Target": '{Target}',
+        "URL" : "{URL}",
+        "Name" : "{Name}",
+        {block:Description}
+        "Description" : "{Description}",
+        {/block:Description}
+        {/block:Link}
+        {block:Chat}
+        {block:Title}
+        "Title"          : "{Title}",
+        {/block:Title}
+        Lines : {
+          {block:Lines}
+          {JSUserNumber} : {
+            Label      : {JSLabel},
+            Name       : {JSName},
+            Line       : {JSLine},
+            UserNumber : {JSUserNumber},
+          },
+          {/block:Lines}
+        },
+        {/block:Chat}
+        {block:Text}
+        "Title"      : "{Title}",
+        "Body"       : {JSBody},
+        {/block:Text}
+        {block:Audio}
+        "AudioPlayerGrey"      : {JSAudioPlayerGrey},
+        "PlayCountWithLabel"   : "{PlayCountWithLabel}",
+        {block:Caption}
+        "Caption"              : {JSCaption},
+        {/block:Caption}
+        {block:ExternalAudio}
+        "ExternalAudioURL"     : "{ExternalAudioURL}",
+        "lang:Download"          : "{lang:Download}"
+        {/block:ExternalAudio}
+        {block:Artist}
+        "Artist"               : "{Artist}",
+        {/block:Artist}
+        {block:TrackName}
+        "TrackName" : "{TrackName}",
+        {/block:TrackName}
+        {/block:Audio}
+
+        "Permalink"  : "{Permalink}",
+        "lang:Notes" : "{lang:Notes}",
+        "NoteCount"  : "{NoteCount}",
+        "PostNotes"  : false,
+        {block:Date}
+        "TimeAgo"    : "{TimeAgo}",
+        {/block:Date}
+        {block:PostNotes}
+        "PostNotes"  : {JSPostNotes},
+        {/block:PostNotes}
+      },
+      {/block:Posts}
+    }
+  }
+</script>
+</body>
+</html>

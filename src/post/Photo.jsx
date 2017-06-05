@@ -1,5 +1,6 @@
+import { PostMeta, PostNotes, PrePost } from './Includes.jsx';
 
-window.PhotoPost = React.createClass({
+const PhotoPost = React.createClass({
   render: function() { return (
     <div className="r_post_photo">
       <div className="photo post">
@@ -27,3 +28,5 @@ window.PhotoPost = React.createClass({
     </div>
   );}
 });
+
+export default PhotoPost;

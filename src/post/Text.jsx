@@ -1,5 +1,6 @@
+import { PostMeta, PostNotes, PrePost } from './Includes.jsx';
 
-window.TextPost = React.createClass({
+const TextPost = React.createClass({
   render: function() { return (
       <div className="r_post_text">
         <div className="text post">
@@ -19,3 +20,5 @@ window.TextPost = React.createClass({
       </div>
   );}
 });
+
+export default TextPost;

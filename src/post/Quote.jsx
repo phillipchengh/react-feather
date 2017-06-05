@@ -1,5 +1,6 @@
+import { PostMeta, PostNotes, PrePost } from './Includes.jsx';
 
-window.QuotePost = React.createClass({
+const QuotePost = React.createClass({
   render: function() { return (
      <div className="r_post_quote">
        <div className="quote post">
@@ -17,3 +18,5 @@ window.QuotePost = React.createClass({
      </div>
   );}
 });
+
+export default QuotePost;

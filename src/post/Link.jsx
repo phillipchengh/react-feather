@@ -1,5 +1,6 @@
+import { PostMeta, PostNotes, PrePost } from './Includes.jsx';
 
-window.LinkPost = React.createClass({
+const LinkPost = React.createClass({
   render: function() { return (
       <div className="r_post_link">
         <div className="link post">
@@ -25,3 +26,5 @@ window.LinkPost = React.createClass({
       </div>
   );}
 });
+
+export default LinkPost;

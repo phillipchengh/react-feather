@@ -1,10 +1,9 @@
-
 /**
  * Elements all posts include
  */
 
 /** Meta-info and permalink */
-window.PostMeta = React.createClass({
+const PostMeta = React.createClass({
   render: function() { return (
     <div className="postmeta">
       {!!this.props.TimeAgo &&
@@ -22,7 +21,7 @@ window.PostMeta = React.createClass({
 });
 
 /** Notes (basically just loads the props.PostNotes html tumblr gives us) */
-window.PostNotes = React.createClass({
+const PostNotes = React.createClass({
   render: function() { return (
     !!this.props.PostNotes
     ? <div dangerouslySetInnerHTML={{__html: this.props.PostNotes}}></div>
@@ -31,10 +30,12 @@ window.PostNotes = React.createClass({
 });
 
 /** A post-type for testing: simply renders the JSON as text **/
-window.PrePost = React.createClass({
+const PrePost = React.createClass({
   render: function() { return (
     <pre>
      {JSON.stringify(this.props)}
     </pre>
   );}
 });
+
+export { PostMeta, PostNotes, PrePost };
